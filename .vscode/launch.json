@@ -5,20 +5,19 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Odoo",
+      "name": "Odoo: Attach",
       "type": "python",
-      "request": "launch",
-      "cwd": "${workspaceRoot}",
-      "program": "/usr/bin/odoo",
-      "args": [
-        "--db_host=${env:HOST}",
-        "--db_port=${env:PORT}",
-        "--db_user=${env:USER}",
-        "--db_password=${env:PASSWORD}",
-        "--database=Odoo14",
-        "--limit-time-real=100000"
+      "request": "attach",
+      "port": 8869,
+      "debugServer": 8888,
+      "host": "localhost",
+      "pathMappings": [
+        {
+          "localRoot": "${workspaceFolder}",
+          "remoteRoot": "/opt/odoo/custom-addons",
+        }
       ],
-      "console": "integratedTerminal"
+      "logToFile": true
     }
   ]
 }
