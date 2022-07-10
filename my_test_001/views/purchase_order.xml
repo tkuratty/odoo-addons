@@ -10,7 +10,7 @@
         <field name="inherit_id" ref="purchase.purchase_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='origin']" position="after">   
-                <field name="x_purchase_text" />
+                <field name="x_purchase_line_count" />
             </xpath>
         </field>
     </record>
@@ -22,7 +22,7 @@
         <field name="inherit_id" ref="purchase.purchase_order_tree"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='invoice_status']" position="after">   
-                <field name="x_purchase_text" />
+                <field name="x_purchase_line_count" />
             </xpath>
         </field>
     </record>
